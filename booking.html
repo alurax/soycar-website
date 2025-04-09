@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Booking | SoyCar Transport & Car Rentals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Add comment about the purpose of this page -->
+    <!-- This page allows customers to book transportation services online -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="images/341277203_1413637722782736_3262694318373621872_n.png" alt="SoyCar Transport & Car Rentals Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html" class="active">Online Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Book Your Transportation</h1>
+            <p>Quick and easy booking for all your transportation needs in Palawan</p>
+        </div>
+    </section>
+    
+    
+    <!-- Booking Section -->
+    <section class="booking-container">
+        <div class="container">
+            <div class="booking-intro">
+                <h2>Reserve Your Transportation Service</h2>
+                <p>Fill out the form below to book your transportation service. Our team will confirm your booking within 24 hours.</p>
+            </div>
+            
+            <!-- CSS Forms - Booking Form -->
+            <div class="booking-form-container">
+                <h3>Booking Form</h3>
+                <form action="#" method="post">
+                    <!-- Personal Information -->
+                    <h4>Personal Information</h4>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Selection -->
+                    <h4>Service Details</h4>
+                    <div class="form-group">
+                        <label for="service-type">Service Type *</label>
+                        <select id="service-type" name="service-type" required>
+                            <option value="">Select a service</option>
+                            <option value="airport-transfer">Airport Transfer</option>
+                            <option value="car-rental">Car Rental</option>
+                            <option value="private-tour">Private Tour</option>
+                            <option value="shared-van">Shared Van Service</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="pickup-date">Pickup Date *</label>
+                                <input type="date" id="pickup-date" name="pickup-date" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="pickup-time">Pickup Time *</label>
+                                <input type="time" id="pickup-time" name="pickup-time" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="pickup-location">Pickup Location *</label>
+                                <input type="text" id="pickup-location" name="pickup-location" placeholder="Hotel name, address, or airport" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="dropoff-location">Drop-off Location *</label>
+                                <input type="text" id="dropoff-location" name="dropoff-location" placeholder="Hotel name, address, or airport" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="passengers">Number of Passengers *</label>
+                        <select id="passengers" name="passengers" required>
+                            <option value="">Select number of passengers</option>
+                            <option value="1-2">1-2 passengers</option>
+                            <option value="3-4">3-4 passengers</option>
+                            <option value="5-7">5-7 passengers</option>
+                            <option value="8-12">8-12 passengers</option>
+                            <option value="13+">13+ passengers</option>
+                        </select>
+                    </div>
+                    
+                    <!-- For Car Rental -->
+                    <div id="car-rental-options" style="display: none;">
+                        <h4>Car Rental Options</h4>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="rental-days">Rental Duration (Days) *</label>
+                                    <input type="number" id="rental-days" name="rental-days" min="1" max="30">
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="car-type">Vehicle Type *</label>
+                                    <select id="car-type" name="car-type">
+                                        <option value="">Select vehicle type</option>
+                                        <option value="sedan">Sedan</option>
+                                        <option value="suv">SUV</option>
+                                        <option value="van">Van</option>
+                                        <option value="minibus">Minibus</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- For Tour Package -->
+                    <div id="tour-options" style="display: none;">
+                        <h4>Tour Package Selection</h4>
+                        <div class="form-group">
+                            <label for="tour-package">Tour Package *</label>
+                            <select id="tour-package" name="tour-package">
+                                <option value="">Select a tour package</option>
+                                <option value="city-tour">City Tour</option>
+                                <option value="underground-river">Underground River Tour</option>
+                                <option value="island-hopping">Island Hopping</option>
+                                <option value="custom">Custom Tour</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Information -->
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests or Additional Information</label>
+                        <textarea id="special-requests" name="special-requests" placeholder="Tell us about any special requirements or questions you may have"></textarea>
+                    </div>
+                    
+                    <!-- Payment Method -->
+                    <h4>Payment Method</h4>
+                    <div class="form-group">
+                        <label>Select Payment Method *</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="pay-cash" name="payment-method" value="cash" required>
+                                <label for="pay-cash">Cash on Arrival</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="pay-gcash" name="payment-method" value="gcash">
+                                <label for="pay-gcash">GCash</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="pay-card" name="payment-method" value="credit-card">
+                                <label for="pay-card">Credit Card</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="pay-bank" name="payment-method" value="bank-transfer">
+                                <label for="pay-bank">Bank Transfer</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Services -->
+                    <h4>Additional Services</h4>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="child-seat" name="additional-services[]" value="child-seat">
+                                <label for="child-seat">Child Seat (+₱200)</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="wifi" name="additional-services[]" value="wifi">
+                                <label for="wifi">Portable WiFi (+₱300/day)</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="tour-guide" name="additional-services[]" value="tour-guide">
+                                <label for="tour-guide">Tour Guide (+₱1,500/day)</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="refreshments" name="additional-services[]" value="refreshments">
+                                <label for="refreshments">Refreshments Package (+₱150/person)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Terms and Conditions -->
+                    <div class="terms-container">
+                        <h4>Terms and Conditions</h4>
+                        <ul>
+                            <li>Bookings must be made at least 24 hours in advance</li>
+                            <li>Cancellations must be made at least 12 hours before the scheduled service</li>
+                            <li>Late cancellations may incur a 50% charge of the total booking amount</li>
+                            <li>No-shows will be charged the full amount</li>
+                            <li>A 50% deposit may be required for certain services</li>
+                        </ul>
+                        <div class="checkbox-option" style="margin-top: 15px;">
+                            <input type="checkbox" id="terms"
